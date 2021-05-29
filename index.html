@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <script src="./js/echarts.js"></script>
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="head">          
+                <img src="./images/zuosanjiao.png" alt="">         
+                <img src="./images/dizhi.png" alt="">
+                <span class="address"> 重庆市 南岸区</span>
+                <img class="third" src="./images/fenxiang.png" alt="">            
+            </div>
+            <div class="level">
+                <p class="til">90</p>
+                <p class="value">良</p>
+            </div>  
+            <div class="li-warning">大风预警</div>
+            <p class="temp">25°</p>
+            <p class="weather">阴</p>
+            <div class="wind">
+                <p class="show windDirection">西风 2级</p>
+                <p class="humidity">湿度 38%</p>
+            </div>
+            <p class="text">天暗下来，你就是阳光~~</p>
+            <div class="windowShow">
+                <h3>大风蓝色预警</h3>
+                <p class="contentShow">海淀区气象台26日13时20分发布大风蓝色预警,预计，当前至20时，海淀区有4级偏北风，阵风7级左右，请注意防范。（预警信息来源：国家预警信息发布中心）</p>
+                <button class="btn-close">我知道了</button>
+            </div>
+            <div class="addressChange">
+               <div class="addressTop-left">
+                   <img src="./images/放大镜.png" alt="">
+                <input type="text" placeholder="搜索地区" class="search">
+               </div>
+               <div class="addressTop-right">
+                <button class="cancle">取消</button>
+                </div>
+                <div class="history">
+                    <span>历史记录</span>
+                    <img src="./images/回收箱.png" alt="" class="clear">
+                </div>
+                <div class="historyRecord">
+                    <ul class="historyUl">
+                     
+                        
+                    </ul>
+                </div>
+                <div class="hot">
+                    热门城市
+                </div>
+                <div class="hotCity">
+                    <ul class="hotUl">
+                        <li>北京</li>
+                        <li>上海</li>
+                        <li>广州</li>
+                        <li>深圳</li>
+                        <li>郑州</li>
+                        <li>西安</li>
+                        <li>南京</li>
+                        <li>杭州</li>
+                        <li>武汉</li>
+                        <li>成都</li>
+                        <li>沈阳</li>
+                        <li>天津</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="condition">
+                <div class="upper">
+                    <img class="close" src="./images/close.png" alt="">
+                    <p class="quality">空气质量指数</p>
+                    <p class="qualityValue">48</p>
+                    <p class="qualityLevel">优</p>
+                </div>
+                <div class="under">
+                    <ul>
+                        <li>
+                            <p>33</p>
+                            <p>PM2.5</p>
+                        </li>
+                        <li>
+                            <p>45</p>
+                            <p>PM10</p>
+                        </li>
+                        <li>
+                            <p>6</p>
+                            <p>SO2</p>
+                        </li>
+                        <li>
+                            <p>27</p>
+                            <p>NO2</p>
+                        </li>
+                        <li>
+                            <p>106</p>
+                            <p>O3</p>
+                        </li>
+                        <li>
+                            <p>1</p>
+                            <p>CO</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="item">
+                <div class="top">
+                    <span class="data">今天</span>
+                    <span class="temperature">28/13°</span>
+                </div>
+                <div class="bottom">
+                    <p class="item-weather">阴转晴</p>
+                    <img src="./images/yin.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="top">
+                    <p class="data">明天</p>
+                    <p class="temperature">29/15°</p>
+                </div>
+                <div class="bottom">
+                    <p class="item-weather">雷阵雨转多云</p>
+                    <img src="./images/yin.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="dayChange">
+            <ol>
+                <li>
+                    <p>08:00</p>
+                    <img src="./images/day/qing.png" alt="">
+                    <p>34°</p>
+                </li>
+                <li>
+                    <p>09:00</p>
+                    <img src="./images/day/qing.png" alt="">
+                    <p>32°</p>
+                </li>
+                <li>
+                    <p>10:00</p>
+                    <img src="./images/day/qing.png" alt="">
+                    <p>33°</p>
+                </li>
+                <li>
+                    <p>11:00</p>
+                    <img src="./images/day/yun.png" alt="">
+                    <p>34°</p>
+                </li>
+
+                <li>
+                    <p>12:00</p>
+                    <img src="./images/day/yun.png" alt="">
+                    <p>34°</p>
+                </li>
+                <li>
+                    <p>13:00</p>
+                    <img src="./images/day/yun.png" alt="">
+                    <p>33°</p>
+                </li>
+                <li>
+                    <p>14:00</p>
+                    <img src="./images/day/qing.png" alt="">
+                    <p>32°</p>
+                </li>
+                <li>
+                    <p>15:00</p>
+                    <img src="./images/day/qing.png" alt="">
+                    <p>32°</p>
+                </li>
+                <li>
+                    <p>16:00</p>
+                    <img src="./images/day/qing.png" alt="">
+                    <p>31°</p>
+                </li>
+                <li>
+                    <p>17:00</p>
+                    <img src="./images/day/yin.png" alt="">
+                    <p>30°</p>
+                </li>
+                <li>
+                    <p>18:00</p>
+                    <img src="./images/day/yin.png" alt="">
+                    <p>30°</p>
+                </li>
+                <li>
+                    <p>19:00</p>
+                    <img src="./images/night/yin.png"alt="">
+                    <p>29°</p>
+                </li>
+                <li>
+                    <p>20:00</p>
+                    <img src="./images/night/yin.png" alt="">
+                    <p>27°</p>
+                </li>
+                <li>
+                    <p>21:00</p>
+                    <img src="./images/night/yu.png" alt="">
+                    <p>28°</p>
+                </li>
+                <li>
+                    <p>22:00</p>
+                    <img src="./images/night/yu.png" alt="">
+                    <p>27°</p>
+                </li>
+                <li>
+                    <p>23:00</p>
+                    <img src="./images/night/yu.png" alt="">
+                    <p>27°</p>
+                </li>
+                <li>
+                    <p>24:00</p>
+                    <img src="./images/night/yu.png" alt="">
+                    <p>29°</p>
+                </li>
+                <li>
+                    <p>01:00</p>
+                    <img src="./images/night/yin.png" alt="">
+                    <p>28°</p>
+                </li>
+                <li>
+                    <p>02:00</p>
+                    <img src="./images/night/yin.png" alt="">
+                    <p>27°</p>
+                </li>
+                <li>
+                    <p>03:00</p>
+                    <img src="./images/night/qing.png" alt="">
+                    <p>29°</p>
+                </li>
+
+                    <li>
+                    <p>05:00</p>
+                    <img src="./images/night/qing.png" alt="">
+                    <p>28°</p>
+                </li>
+                <li>
+                    <p>06:00</p>
+                    <img src="./images/night/qing.png" alt="">
+                    <p>27°</p>
+                </li>
+                <li>
+                    <p>07:00</p>
+                    <img src="./images/day/qing.png" alt="">
+                    <p>29°</p>
+                </li>
+                <li>
+                    <p>08:00</p>
+                    <img src="./images/day/qing.png" alt="">
+                    <p>31°</p>
+                </li>
+                <li>
+                    <p>09:00</p>
+                    <img src="./images/day/yun.png" alt="">
+                    <p>32°</p>
+                </li>
+                <li>
+                    <p>10:00</p>
+                    <img src="./images/day/yun.png" alt="">
+                    <p>33°</p>
+                </li>
+           
+            </ol>
+        </div>
+    </section>
+    <section>
+        <div class="chart">
+            <div class="chartTitle">
+                <ol class="chartOl">
+                    <li class="item">
+                        <div class="chartTop">
+                            <p class="day">昨天</p>
+                            <p class="date">05/29</p>
+                            <p class="situation">多云</p>
+                            <img src="./images/晴天.png" alt="">
+                        </div>
+                        <div class="chartBottom">
+                            <img src="./images/晴天.png" alt="">
+                            <p>小雨</p>
+                            <p>东北风</p>
+                            <p>3级</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="chartTop">
+                            <p>明天</p>
+                            <p>05/29</p>
+                            <p>多云</p>
+                            <img src="./images/晴天.png" alt="">
+                        </div>
+                        <div class="chartBottom">
+                            <img src="./images/晴天.png" alt="">
+                            <p>小雨</p>
+                            <p>东北风</p>
+                            <p>3级</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="chartTop">
+                            <p>明天</p>
+                            <p>05/29</p>
+                            <p>多云</p>
+                            <img src="./images/晴天.png" alt="">
+                        </div>
+                        <div class="chartBottom">
+                            <img src="./images/晴天.png" alt="">
+                            <p>小雨</p>
+                            <p>东北风</p>
+                            <p>3级</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="chartTop">
+                            <p>明天</p>
+                            <p>05/29</p>
+                            <p>多云</p>
+                            <img src="./images/晴天.png" alt="">
+                        </div>
+                        <div class="chartBottom">
+                            <img src="./images/晴天.png" alt="">
+                            <p>小雨</p>
+                            <p>东北风</p>
+                            <p>3级</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="chartTop">
+                            <p>明天</p>
+                            <p>05/29</p>
+                            <p>多云</p>
+                            <img src="./images/晴天.png" alt="">
+                        </div>
+                        <div class="chartBottom">
+                            <img src="./images/晴天.png" alt="">
+                            <p>小雨</p>
+                            <p>东北风</p>
+                            <p>3级</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="chartTop">
+                            <p>明天</p>
+                            <p>05/29</p>
+                            <p>多云</p>
+                            <img src="./images/晴天.png" alt="">
+                        </div>
+                        <div class="chartBottom">
+                            <img src="./images/晴天.png" alt="">
+                            <p>小雨</p>
+                            <p>东北风</p>
+                            <p>3级</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="chartTop">
+                            <p>明天</p>
+                            <p>05/29</p>
+                            <p>多云</p>
+                            <img src="./images/晴天.png" alt="">
+                        </div>
+                        <div class="chartBottom">
+                            <img src="./images/晴天.png" alt="">
+                            <p>小雨</p>
+                            <p>东北风</p>
+                            <p>3级</p>
+                        </div>
+                    </li>
+                    <!-- <li class="item">
+                        <div class="chartTop">
+                            <p>明天</p>
+                            <p>05/29</p>
+                            <p>多云</p>
+                            <img src="./images/晴天.png" alt="">
+                        </div>
+                        <div class="chartBottom">
+                            <img src="./images/晴天.png" alt="">
+                            <p>小雨</p>
+                            <p>东北风</p>
+                            <p>3级</p>
+                        </div>
+                    </li> -->
+                </ol>
+            </div>
+            <div class="chartMiddle">
+
+            </div>
+          
+        </div>
+    </section>
+    <section>
+        <div class="footer">          
+                <ul class="footerUl first">
+                    <li>
+                        <img src="./images/limit.png" alt="">
+                        <p>1和6</p>
+                        <p>尾号限行</p>
+                    </li>
+                    <li>
+                        <img src="./images/cloth.png" alt="">
+                        <p>舒适</p>
+                        <p>穿衣</p>
+                    </li>
+                    <li>
+                        <img src="./images/umbrella.png" alt="">
+                        <p>不带伞</p>
+                        <p>雨伞</p>
+                    </li>
+                    <li>
+                        <img src="./images/pill.png" alt="">
+                        <p>少发</p>
+                        <p>感冒</p>
+                    </li>
+                    <li>
+                        <img src="./images/washcar.png" alt="">
+                        <p>较不宜</p>
+                        <p>洗车</p>
+                    </li>
+                    <li>
+                        <img src="./images/chenlian.png" alt="">
+                        <p>较适宜</p>
+                        <p>运动</p>
+                    </li>
+                    <li>
+                        <img src="./images/sun.png" alt="">
+                        <p>极强</p>
+                        <p>防嗮</p>
+                    </li>
+                    <li>
+                        <img src="./images/diaoyu.png" alt="">
+                        <p>较适宜</p>
+                        <p>钓鱼</p>
+                    </li>
+                </ul>                
+        </div>
+      <div class="cover">
+
+      </div>
+        <div class="alertWin">
+            <h3>穿衣指数</h3>
+            <p>建议着长袖T恤、衬衫加单裤等服装。年老体弱者宜着针织长袖衬衫、马甲和长裤。</p>
+            <button class="back">我知道了</button>
+        </div>
+    </section>
+    <section>
+        <div class="source">
+            <p><a href="http://m.weather.com.cn">数据来源于中国天气网</a></p>
+            <p>Copyright © 1998 - 2021 Tencent. All Rights Reserved</p>
+        </div>
+    </section>
+  <script src="./js/flexible.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+
+
+
+
+  <!-- 折线图 -->
+   <script>
+        var xDataArr=['昨天','今天','明天','后天','周一','周二','周三'];
+        var yDataArr1=[27,25,25,27,31,32,28];
+        var yDataArr2=[19,20,19,20,21,22,22];
+        var mEchart=echarts.init(document.querySelector('.chartMiddle'));
+        var option={
+            tooltip:{
+                trigger:'axis',
+                triggerOn:'click',
+                formatter:function(arg){
+                    return arg[0].name+arg[0].data
+                }
+                // formatter: '{b}\n{c}'
+            },
+            label: {
+                show: true
+            },
+            xAxis:{
+                type:'category',
+                data:xDataArr,
+                //紧挨边缘
+                boundaryGap:false,
+                show:false
+            },
+            yAxis:{
+                type:'value',
+                //如果数值相差较近，要支持缩放，否则折线就会看着想一条直线
+                //缩放，脱离0值比例
+                scale:true ,
+                max : 33,
+                min : 19,
+                 show:false
+            },
+            series:[
+                {
+                    name:'康师傅',
+                    type:'line',
+                    data:yDataArr1,
+                    //标注最值
+                    // markPoint:{
+                    //     data:[
+                    //         {
+                    //             type:'max'
+                    //         },{
+                    //             type:'min'
+                    //         }
+                    //     ]
+                    // },
+                   
+                    //线是否平滑
+                    smooth:true,
+                    lineStyle:{
+                        color:'green',
+                        //线条风格
+                        type:'solid' //dashed虚线  solid实线  dotted点线
+                    },
+                    // areaStyle:{
+                    //     color:'red'
+                    // }
+                },
+                {
+                    smooth:'true',
+                        name:"低温",
+                        type:'line',
+                        data:yDataArr2,
+                        lineStyle:{
+                        color:'green',
+                        //线条风格
+                        type:'solid' //dashed虚线  solid实线  dotted点线
+                    },
+                        
+                }
+            ]
+        }
+        mEchart.setOption(option);
+    </script> 
+</body>
+</html>
